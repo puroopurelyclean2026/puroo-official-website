@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pu.Roo Purely Clean | Shop</title>
+<meta name="description" content="Shop Pu.Roo Purely Clean cleaning solutions. Refill and new-container prices for laundry, household, dishwashing, health & hygiene, automotive and pet care.">
+<style>
+:root{--navy:#102b68;--blue:#1f66c1;--green:#0d5b35;--green2:#147447;--light:#f5f8fb;--text:#172033;--muted:#657084;--gold:#f5d66b}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f8fb;color:var(--text)}
+header{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid #e2e7ee;box-shadow:0 2px 14px #0000000d}
+.nav{max-width:1200px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-weight:900;font-size:27px;letter-spacing:-1px;color:#0b5a35} .brand span{color:var(--navy)} .nav a{text-decoration:none;color:var(--navy);font-weight:700;margin-left:14px}
+.hero{background:linear-gradient(135deg,#fff 0%,#eef5ff 55%,#e9f7ef 100%);padding:55px 20px 40px;text-align:center}
+.hero h1{font-size:46px;margin:0 0 8px;color:var(--navy)} .hero p{font-size:18px;color:var(--muted);margin:0 auto 22px;max-width:700px}
+.badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap} .badge{background:#fff;border:1px solid #dbe4ef;padding:9px 14px;border-radius:99px;font-weight:700}
+.controls{max-width:1200px;margin:25px auto 10px;padding:0 20px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.search{flex:1;min-width:240px;padding:13px 16px;border:1px solid #d7dee8;border-radius:12px;font-size:15px}
+.filters{display:flex;gap:8px;flex-wrap:wrap} .filter{border:1px solid #ccd6e3;background:#fff;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:700;color:var(--navy)}
+.filter.active{background:var(--navy);color:#fff}
+.grid{max-width:1200px;margin:18px auto 60px;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid #e1e7ef;border-radius:18px;overflow:hidden;box-shadow:0 6px 22px #13203d0b;display:flex;flex-direction:column}
+.photo{height:235px;background:linear-gradient(145deg,#f2f6fb,#fff);position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:none} .photo.has-image img{display:block}
+.photo-icon{font-size:76px;color:#d0d9e5} .upload{position:absolute;right:10px;bottom:10px;background:#fff;border:1px solid #d6deea;border-radius:10px;padding:8px 10px;font-weight:700;font-size:12px;cursor:pointer;box-shadow:0 2px 8px #0001}
+.upload input{display:none}
+.content{padding:17px} .cat{font-size:12px;color:var(--green2);font-weight:800;text-transform:uppercase;letter-spacing:.7px}
+.name{font-size:21px;font-weight:900;color:var(--navy);margin:6px 0} .desc{font-size:14px;line-height:1.45;color:var(--muted);min-height:61px}
+.size{margin-top:12px;font-size:12px;font-weight:800;color:#566174} select{width:100%;padding:11px;border:1px solid #d6dee9;border-radius:10px;margin-top:5px;background:#fff}
+.mode{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px} .mode button{border:1px solid #cfd9e6;background:#fff;border-radius:10px;padding:10px 7px;cursor:pointer;font-weight:800;color:var(--navy)}
+.mode button.active{background:var(--green);color:#fff;border-color:var(--green)}
+.price{font-size:29px;font-weight:900;color:var(--green);margin-top:12px} .save{font-size:12px;color:#9b7600;font-weight:800;margin-top:2px}
+.buyrow{display:grid;grid-template-columns:80px 1fr;gap:8px;margin-top:13px} .qty{display:flex;border:1px solid #d5deea;border-radius:10px;overflow:hidden;height:44px} .qty button{width:26px;border:0;background:#f2f5f9;cursor:pointer;font-size:18px} .qty input{width:28px;border:0;text-align:center;font-weight:800}
+.order{height:44px;border:0;border-radius:10px;background:var(--navy);color:#fff;font-weight:900;cursor:pointer;font-size:14px}
+.note{max-width:1200px;margin:0 auto 30px;padding:0 20px;color:var(--muted);font-size:13px}
+.empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--muted)}
+footer{background:#0c5534;color:#fff;padding:30px 20px;text-align:center} footer a{color:#fff}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.hero h1{font-size:35px}.grid{grid-template-columns:1fr}.nav a{display:none}}
+</style>
+
+<style>
+.photo-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  width:100%;
+  margin:10px 0 12px;
+  padding:11px 14px;
+  border-radius:10px;
+  background:#0b6b3a;
+  color:#fff !important;
+  text-decoration:none !important;
+  font-weight:700;
+  text-align:center;
+  box-sizing:border-box;
+}
+.photo-link:hover{filter:brightness(.92);}
+</style>
+
+
+<style>
+:root{
+  --navy:#083b7a!important;
+  --blue:#0a58b5!important;
+  --green:#0a58b5!important;
+  --green2:#0a58b5!important;
+  --light:#f4f9ff!important;
+  --text:#17324a!important;
+}
+body{background:#f7fbff!important}
+header{background:#ffffff!important;border-bottom:1px solid #d8e6f6!important}
+.brand{color:#111!important}
+.brand span{color:#0a58b5!important}
+.hero{background:linear-gradient(180deg,#fff,#eef6ff)!important}
+.hero h1{color:#083b7a!important}
+.badge{border-color:#d8e6f6!important}
+.filter.active{background:#083b7a!important}
+.card{border-color:#d8e6f6!important;box-shadow:0 8px 28px #0b3d7a12!important}
+.cat{color:#0a58b5!important}
+.name{color:#083b7a!important}
+.mode button.active{background:#0a58b5!important;border-color:#0a58b5!important}
+.price{color:#0a58b5!important}
+.order{background:#083b7a!important}
+footer{background:#082d5d!important}
+.photo-link{background:#0a58b5!important}
+</style>
+
+</head>
+<body>
+<header><div class="nav">
+  <div class="brand">PU.<span>R</span>O.O <small style="font-size:11px;color:#172033;display:block;letter-spacing:.3px">PURELY CLEAN</small></div>
+  <div><a href="index.html">Home</a><a href="products.html">Shop / Order</a><a href="mailto:pu.roopurelyclean2026@gmail.com">Contact</a></div>
+</div></header>
+
+<section class="hero">
+  <h1>Shop Pu.Roo Purely Clean</h1>
+  <p>Professional cleaning solutions for homes, businesses, vehicles and pets. Choose refill or new-container pricing, select your size, then order directly.</p>
+  <div class="badges"><div class="badge">Refill & Save</div><div class="badge">Multiple Sizes</div><div class="badge">Easy Ordering</div></div>
+</section>
+
+<div class="controls">
+  <input id="search" class="search" placeholder="Search products...">
+  <div id="filters" class="filters"></div>
+</div>
+
+<div class="grid" id="grid"></div>
+<div class="note">Prices shown are based on your July 2026 Pu.Roo Price Guide. Some sizes have different prices; select the size to see the applicable price. Product photos can be added later using the photo button on each card.</div>
+
+<footer>
+  <strong>PU.ROO PURELY CLEAN</strong><br>
+  Professional Cleaning Solutions · <a href="https://www.facebook.com/profile.php?id=61593461965134" target="_blank">Facebook</a> ·
+  <a href="https://wa.me/639693557609" target="_blank">WhatsApp</a> ·
+  <a href="mailto:pu.roopurelyclean2026@gmail.com">Email</a>
+</footer>
+
+<script>
+const PRODUCTS = [{"cat": "Automotive & Pet Care", "name": "Car Shampoo Supreme", "desc": "High-foaming formula that removes dirt and grime. Leaves cars shiny and streak-free.", "refill": 166.92, "new": 203.92, "sizes": ["1 Gallon", "1 Liter", "3.2L", "Drum"]}, {"cat": "Automotive & Pet Care", "name": "Car Shampoo Saver", "desc": "Effective car wash at a lower cost. Tough on dirt, mild on paint.", "refill": 110.04, "new": 45.39, "sizes": ["1 Gallon", "1L PB", "3.2L", "Drum"]}, {"cat": "Automotive & Pet Care", "name": "Pet Shampoo", "desc": "Gentle and effective cleansing for pets. Leaves fur soft, clean and fresh-smelling.", "refill": 331.4, "new": 114.56, "sizes": ["1 Gallon", "1L PB", "500mL", "Drum"]}, {"cat": "Laundry", "name": "Laundry Detergent Luxury", "desc": "Premium clean and freshness for everyday laundry.", "refill": 218.38, "new": 211.11, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "Laundry Detergent Calm", "desc": "Gentle clean with long-lasting freshness. Perfect for the whole family.", "refill": 154.39, "new": 161.12, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "White Fabric Bleach w/ Anti Yellow Agent", "desc": "Brightens whites and removes yellowing. Safe and effective for white fabrics.", "refill": 152.12, "new": 159.34, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "Color Safe Bleach", "desc": "Removes stains and brightens colors without damaging fabrics.", "refill": 254.02, "new": 238.35, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "Fabcon Calm", "desc": "Fabric conditioner that keeps clothes soft, smooth and fresh all day.", "refill": 176.6, "new": 178.47, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "Fabcon Luxury", "desc": "Luxurious fragrance and long-lasting softness for your favorite clothes.", "refill": 217.84, "new": 257.56, "sizes": ["1 Gallon", "2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Laundry", "name": "Laundry Finishing Spray", "desc": "Reduces wrinkles, freshens fabrics and makes ironing easier.", "refill": 111.02, "new": 95.38, "sizes": ["2.5L (WP)", "1L (WP)", "1L (PB)", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Ethyl Alcohol (Scented)", "desc": "With fragrance for a refreshing and clean experience.", "refill": 611.72, "new": 202.16, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-SPRAY", "1L JC", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Hand Sanitizer", "desc": "70% alcohol formula for effective germ protection.", "refill": 512.26, "new": 191.08, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-PUMP", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Disinfectant with Scent", "desc": "Disinfects and eliminates odors. Leaves a pleasant, long-lasting scent.", "refill": 628.38, "new": 207.37, "sizes": ["1 Gallon", "1L PB", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Lux Fabric Fragrance (Beccarat, Nectarine & Light Blue)", "desc": "Premium long-lasting fragrance for fabrics and spaces.", "refill": 2438.31, "new": 791.72, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Lux Fabric Fragrance (Delina)", "desc": "Luxurious and elegant fragrance for a touch of sophistication.", "refill": 2569.58, "new": 833.39, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Diffuser (Nectarine)", "desc": "Creates a relaxing ambiance with a long-lasting scent.", "refill": 1522.23, "new": 506.7, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Health & Hygiene", "name": "Tub Cleaner / Dishwasher Machine Cleaner", "desc": "Removes limescale, grease and residue. Keeps machines and tubs clean and efficient.", "refill": 623.76, "new": 532.5, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Household", "name": "Kitchen / Engine Degreaser", "desc": "Heavy-duty degreaser for kitchen, engine and industrial use.", "refill": 321.55, "new": 291.79, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Household", "name": "Room & Linen Spray", "desc": "Freshens rooms and fabric. Long-lasting scent, eliminates odors.", "refill": 1243.27, "new": 419.52, "sizes": ["1 Gallon", "1L PB-REG", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Household", "name": "Tile Bowl Cleaner", "desc": "Removes tough stains and hard water marks. Keeps bowls clean and fresh.", "refill": 361.37, "new": 321.98, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Household", "name": "Hand Soap", "desc": "Effective yet gentle clean for everyday hand hygiene.", "refill": 231.11, "new": 90.72, "sizes": ["1 Gallon", "1L WP", "1L PB", "1L AB-PUMP", "500mL", "3.2L", "Drum"]}, {"cat": "Household", "name": "Multi Purpose Soap", "desc": "All-around cleaning soap for various household surfaces and items.", "refill": 231.18, "new": 103.49, "sizes": ["1 Gallon", "1L WP", "1L PB", "1L AB-PUMP", "500mL", "3.2L", "Drum"]}, {"cat": "Household", "name": "Glass Cleaner", "desc": "Streak-free shine for glass and mirrors.", "refill": 156.75, "new": 79.38, "sizes": ["1 Gallon", "1L AB-REG", "1L AB-SPRAY", "500mL", "3.2L", "Drum"]}, {"cat": "Household", "name": "Tub Cleaner / Dishwasher Machine Cleaner", "desc": "Removes limescale, grease and residue. Keeps machines and tubs clean and efficient.", "refill": 623.76, "new": 532.5, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Dishwashing", "name": "Dishwashing Liquid", "desc": "Powerful grease cutting with a gentle touch. Leaves dishes sparkling clean.", "refill": 166.78, "new": 170.8, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Dishwashing", "name": "Dishwashing Liquid Savers", "desc": "Same great clean, better value. More savings per wash.", "refill": 99.14, "new": 117.96, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Dishwashing", "name": "Dishwashing Liquid Unscented", "desc": "Fragrance-free formula. Tough on grease, gentle on sensitive skin.", "refill": 162.23, "new": 167.25, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}, {"cat": "Dishwashing", "name": "Bleach", "desc": "Removes stains and kills 99.9% of germs. For cleaner, hygienic kitchenware.", "refill": 92.97, "new": 113.14, "sizes": ["1 Gallon", "2.5L WP", "1L WP", "1L PB", "3.2L", "Drum"]}];
+const PHONE = "639693557609";
+const FB = "https://www.facebook.com/profile.php?id=61593461965134";
+let category = "All", search = "";
+
+const categoryEmoji = {
+ "Automotive & Pet Care":"🚗",
+ "Laundry":"🧺",
+ "Health & Hygiene":"🧴",
+ "Household":"🏠",
+ "Dishwashing":"🍽️"
+};
+
+const filters = document.getElementById("filters");
+["All", ...new Set(PRODUCTS.map(p=>p.cat))].forEach(c=>{
+ const b=document.createElement("button"); b.className="filter"+(c==="All"?" active":""); b.textContent=(c==="All"?"All Products":c);
+ b.onclick=()=>{category=c;document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");render();};
+ filters.appendChild(b);
+});
+document.getElementById("search").addEventListener("input",e=>{search=e.target.value.toLowerCase();render()});
+
+function key(p,i){return "puroo-photo-"+i}
+function render(){
+ const grid=document.getElementById("grid"); grid.innerHTML="";
+ const list=PRODUCTS.map((p,i)=>({...p,i})).filter(p=>
+   (category==="All"||p.cat===category) &&
+   (p.name.toLowerCase().includes(search)||p.desc.toLowerCase().includes(search))
+ );
+ if(!list.length){grid.innerHTML='<div class="empty">No products found. Try another search.</div>';return}
+ list.forEach(p=>grid.appendChild(card(p)));
+}
+function card(p){
+ const el=document.createElement("article");el.className="card";
+ const saved=localStorage.getItem(key(p,p.i));
+ el.innerHTML=`
+  <div class="content">
+    <div class="cat">${p.cat}</div><div class="name">${p.name}</div><div class="desc">${p.desc}</div>
+    <div class="size">SIZE / CONTAINER</div>
+    <select class="sizes">${p.sizes.map((s,i)=>`<option value="${i}">${s}</option>`).join("")}</select>
+    <div class="mode"><button class="ref active">Refill</button><button class="new">New Container</button></div>
+    <div class="price">₱<span class="amount">${p.refill.toFixed(2)}</span></div>
+    <div class="save">Bring your own container & save more</div>
+    <div class="buyrow"><div class="qty"><button class="minus">−</button><input value="1" min="1" type="number"><button class="plus">+</button></div><button class="order">ORDER NOW</button></div>
+  </div>`;
+ const photo=el.querySelector("input[type=file]");
+ photo.onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{localStorage.setItem(key(p,p.i),r.result);render()};r.readAsDataURL(f)};
+ const ref=el.querySelector(".ref"), nw=el.querySelector(".new"), amount=el.querySelector(".amount"), save=el.querySelector(".save");
+ function mode(m){ref.classList.toggle("active",m==="ref");nw.classList.toggle("active",m==="new");amount.textContent=(m==="ref"?p.refill:p.new).toFixed(2);save.textContent=m==="ref"?"Bring your own container & save more":"New container / packaging included";}
+ ref.onclick=()=>mode("ref");nw.onclick=()=>mode("new");
+ el.querySelector(".minus").onclick=()=>{let q=Math.max(1,+el.querySelector("input[type=number]").value-1);el.querySelector("input[type=number]").value=q};
+ el.querySelector(".plus").onclick=()=>{let q=+el.querySelector("input[type=number]").value+1;el.querySelector("input[type=number]").value=q};
+ el.querySelector(".order").onclick=()=>{
+   const size=p.sizes[+el.querySelector(".sizes").value], q=+el.querySelector("input[type=number]").value||1;
+   const m=ref.classList.contains("active")?"Refill / Bring Own Container":"New Container";
+   const price=(m.startsWith("Refill")?p.refill:p.new).toFixed(2);
+   const msg=`Hi Pu.Roo! I would like to order:\n\nProduct: ${p.name}\nSize: ${size}\nOption: ${m}\nQuantity: ${q}\nPrice per unit: ₱${price}\n\nPlease confirm availability and total.`;
+   window.open("https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg),"_blank");
+ };
+ return el;
+}
+render();
+</script>
+</body></html>
+<style>
+.photo,.photo-icon{display:none!important}
+.card .content{padding-top:22px!important}
+</style>
